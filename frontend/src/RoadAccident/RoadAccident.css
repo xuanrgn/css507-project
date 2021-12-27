@@ -1,0 +1,1062 @@
+.RoadAccident_main {
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.RoadAccident_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.RoadAccident_filter {
+}
+
+.RoadAccident_filter_item_filter_buttons {
+    width: 50px;
+    height: 32px;
+}
+
+.RoadAccident_filter_item_filter_buttons button {
+    background: inherit;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+.crimes_maps {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.crimes_maps_map {
+    height: 100%;
+    width: 100%;
+}
+.crimes_maps_legends {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.crimes_maps_legend_button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px 5px 5px;
+    width: max-content;
+    align-items: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    background: #414e609c;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.RoadAccident_filter_item_filter_buttons img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.RoadAccident_filter {
+    width: 100%;
+    height: max-content;
+}
+.RoadAccident_filter_filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: max-content;
+    flex-wrap: wrap;
+}
+.RoadAccident_filter_item {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.RoadAccident_title_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    min-height: max-content;
+}
+.RoadAccident_title {
+    font-size: clamp(12px, 4vw, 22px);
+    display: flex;
+    align-items: center;
+    color: white;
+
+
+}
+.RoadAccident_body.map_block {
+    display: none;
+    border: 1px solid white;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+.RoadAccident_body.table_block {
+    display: none;
+}
+.RoadAccident_body.table_block.active,
+.RoadAccident_body.map_block.active {
+    display: flex;
+}
+.RoadAccident_body_chart_wrap.active {
+    display: flex;
+    visibility: visible;
+}
+.RoadAccident_body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.chart_block_wrap  canvas {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100% - 20px) !important;
+}
+
+.RoadAccident_selected_filters .ant_drop_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 2px;
+    color: white;
+    background: inherit;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.RoadAccident_filter .ant_drop_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+    border-radius: 2px;
+    color: white;
+    background: inherit;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.ant_drop_block,
+.Article_filter_Block {
+    background: #414e60;
+    width: 230px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ant_drop_block > div:first-child,
+.Article_filter_Block .ant_drop_block_Checkbox {
+    max-height: 300px;
+    overflow: scroll;
+}
+.ant_drop_block_text {
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    transition: all 1.8s ease-in-out 1.8s;
+}
+.dropdown-container.active {
+    display: block;
+}
+.ant_drop_block .ant-dropdown-menu-item.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+.ant_drop_block .ant-dropdown-menu-item:hover,
+.ant_drop_block .ant-dropdown-menu-submenu-title:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.ant_drop_block .ant-dropdown-menu-item:last-child:hover,
+.ant_drop_block .ant-dropdown-menu-submenu-title:last-child:hover {
+    background: inherit;
+}
+.ant_drop_block_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+}
+.ant-checkbox-group-item.ant-checkbox-wrapper.ant-checkbox-wrapper-disabled
+span {
+    color: rgba(0, 0, 0, 0.25);
+}
+.default_btn_style {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    color: white;
+    cursor: not-allowed;
+    /* pointer-events: none; */
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.default_btn_style span {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.default_btn_style.active {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.default_btn_style.active span {
+    pointer-events: all;
+}
+.ant_drop_block .ant-dropdown-menu-item:last-child {
+    width: 100%;
+
+    cursor: inherit;
+}
+.default_btn_style:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.default_btn_style:active {
+    background: inherit;
+    color: #0d0f13;
+}
+.non_pointer:hover {
+    cursor: inherit;
+    background: inherit;
+}
+.ant_drop_block_item_list .ant-checkbox-group-item {
+    color: white;
+}
+.ant_drop_block_item_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ant_drop_block_input {
+    background: inherit;
+    width: 100%;
+}
+.ant_drop_block_input input {
+    background: inherit;
+    color: white;
+}
+.ant_drop_block_input svg {
+    fill: white;
+}
+.ant_drop_block_input.ant_drop_block_input:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.ant_drop_block_input.ant-input-affix-wrapper:focus,
+.ant_drop_block_input.ant-input-affix-wrapper-focused {
+    box-shadow: none;
+    background: inherit;
+}
+.ant-dropdown-menu-item .ant-picker {
+    width: 100%;
+}
+.ant_drop_block_Checkbox_Group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.ant_drop_block_Checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.ant_drop_block_Checkbox .ant-checkbox-disabled span {
+    opacity: 0.4;
+}
+.ant-checkbox-group-item.ant-checkbox-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+}
+.ant-checkbox-group-item.ant-checkbox-wrapper:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+.ant-checkbox-group-item > .ant-checkbox {
+    width: 15px;
+}
+.ant-checkbox-group-item > span:last-child {
+    width: calc(100% - 15px);
+    color: #ffffff;
+}
+.RoadAccident_body.info_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+    border: 1px solid white;
+}
+.info_block_item {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.info_block_item:first-child {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.info_block_item:last-child {
+    width: 30%;
+    font-size: 36px;
+}
+.info_block_item_date {
+    font-size: 16px;
+}
+.RoadAccident_body.table_block .ant-table {
+    color: white;
+    background: inherit;
+}
+.RoadAccident_body.table_block .ant-table-tbody > tr.ant-table-row:hover > td {
+    color: #414e60;
+    background: #ffffff80;
+    text-align: center;
+}
+.RoadAccident_body.table_block .ant-table-thead > tr > th {
+    background: #414e60;
+    color: white;
+    text-align: center;
+}
+.RoadAccident_body.table_block .ant-table-thead > tr > th,
+.RoadAccident_body.table_block .ant-table-tbody > tr > td,
+.RoadAccident_body.table_block .ant-table tfoot > tr > th,
+.RoadAccident_body.table_block .ant-table tfoot > tr > td {
+    padding: 5px;
+    text-align: center;
+}
+.RoadAccident_body.table_block .ant-pagination-prev .ant-pagination-item-link,
+.RoadAccident_body.table_block .ant-pagination-next .ant-pagination-item-link {
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.RoadAccident_body.table_block .ant-pagination-prev,
+.ant-pagination-next,
+.RoadAccident_body.table_block .ant-pagination-jump-prev,
+.RoadAccident_body.table_block .ant-pagination-jump-next {
+    min-width: 25px;
+    height: 25px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 25px;
+}
+.RoadAccident_body.table_block .ant-table-thead > tr > th:nth-child(8),
+.RoadAccident_body.table_block .ant-table-thead > tr > th:nth-child(9){
+    width: 200px;
+}
+.RoadAccident_body.table_block .ant-pagination-item {
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background: inherit;
+}
+.RoadAccident_body.table_block .ant-pagination-item:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.AdminModal_style {
+    height: 100vh;
+    width: 100vw;
+}
+.AdminModal_style.ant-modal {
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.AdminModal_style .ant-modal-content {
+    height: 100%;
+    background: rgba(95, 108, 123, 0.3);
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.AdminModal_style .ant-modal-body {
+    padding: 5px 5px 50px 5px;
+    height: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdminModal_style .ant-modal-header {
+    padding: 10px;
+    background: #5f6c7b;
+    height: 40px;
+}
+
+.AdminModal_style .ant-modal-title {
+    color: white;
+}
+
+.AdminModal_style .ant-modal-close-x {
+    width: 25px;
+    height: 25px;
+    line-height: normal;
+    color: white;
+}
+
+.AdminModal_style .ant-modal-close-x:hover {
+    color: black;
+}
+
+.AdminModal_style .ant-modal-close {
+    top: 10px;
+    right: 5px;
+}
+
+.AdminModal_style .ant-tabs-nav {
+    margin: 0;
+}
+
+.AdminModal_style .ant-tabs-nav:before {
+    border: none;
+}
+
+.AdminModal_style .ant-tabs-nav-list .ant-tabs-tab {
+    padding: 0 20px;
+    border: 1px solid white;
+    margin-right: 5px;
+    border-bottom: none;
+    min-height: 40px;
+    height: 40px;
+}
+
+.AdminModal_style .ant-tabs-nav-list .ant-tabs-tab.ant-tabs-tab-active {
+    border-bottom: none;
+    border-right: 1px solid white;
+    z-index: 999;
+    min-height: 40px;
+    height: 40px;
+}
+
+.AdminModal_style .ant-tabs-content-holder {
+    z-index: 100;
+    height: calc(100% - 50px);
+}
+
+.AdminModal_style .ant-tabs-nav {
+    margin-bottom: -1px;
+    z-index: 999;
+}
+
+.AdminModal_style .ant-tabs-content-holder {
+    border-left: 1px solid white;
+}
+
+.AdminModal_style .ant-tabs-tabpane {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+.AdminModal_style .ant-modal-footer {
+    display: none;
+}
+
+.AdminModal_style .ant-tabs.ant-tabs-top {
+    height: 100%;
+}
+
+.AdminModal_style .ant-form-item-control-input-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.AdminModal_style .ant-form-item {
+    margin-bottom: 0;
+}
+
+.AdminModal_style .ant-table {
+    max-height: 50vh;
+}
+
+.AdminModal_style .ant-table-content thead {
+    height: 35px;
+}
+
+.AdminModal_style .ant-table-content tbody {
+    height: calc(100% - 35px);
+    overflow: scroll;
+}
+
+.AdminModal_style .ant-spin-container,
+.AdminModal_style .ant-spin-nested-loading {
+    position: initial;
+}
+
+.AdminModal_style .ant-tabs-content-holder {
+    overflow: initial;
+}
+
+.AdminModal_style .ant-table {
+    padding: 0 0 30px 0;
+    overflow: scroll;
+}
+
+.AdminModal_style table {
+    position: relative;
+}
+
+.AdminModal_style .ant-table-thead {
+    position: sticky;
+}
+
+.RoadAccident_body.table_block .ant-pagination-item-active {
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 1);
+    min-width: 25px;
+    height: 25px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 25px;
+}
+.RoadAccident_body.table_block .ant-pagination-item:focus a,
+.RoadAccident_body.table_block .ant-pagination-item:hover a {
+    color: #414e60;
+}
+.RoadAccident_body.table_block .ant-pagination-item a,
+.RoadAccident_body.table_block .ant-pagination-item a {
+    color: white;
+}
+.RoadAccident_body.table_block .ant-pagination-item-active a {
+    color: #414e60;
+}
+.RoadAccident_body.table_block .ant-table-pagination-right {
+    align-self: center;
+}
+.RoadAccident_body.table_block .ant-table-wrapper,
+.RoadAccident_body.table_block .ant-spin-nested-loading {
+    height: 100%;
+}
+.RoadAccident_body.table_block .ant-spin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.RoadAccident_filter_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 110px;
+    justify-content: space-around;
+}
+.RoadAccident_filter_btn_icon {
+    width: 25px;
+    height: 25px;
+}
+.RoadAccident_filter_btn_icon svg g {
+    fill: rgba(255, 255, 255, 0.5);
+}
+.RoadAccident_filter_btn_icon.active svg g {
+    fill: lightgreen;
+}
+.RoadAccident_body_chart_wrap {
+    /* min-width: 750px;*/
+    width: 100%;
+    visibility: hidden;
+    flex-direction: column;
+
+    border: 1px solid white;
+    display: none;
+
+}
+.RoadAccident_body.table_block {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.RoadAccident_body_wrap {
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100% - 75px);
+}
+
+
+
+.RoadAccident_body_wrap {
+    display: grid;
+    grid-template-columns: minmax(400px, 750px) minmax(400px, 1fr);
+    grid-template-rows: 60px 72% max-content;
+
+    width: 100%;
+    grid-gap: 5px;
+    flex-grow: 1;
+}
+.RoadAccident_body_chart_block > div{
+    border: 1px solid white;
+    padding: 5px;
+    height: calc(50% - 2px);
+    width: 100%;
+
+}
+.RoadAccident_body_chart_block > div:first-child{
+    margin-bottom: 5px;
+}
+.RoadAccident_body_chart_wrap:nth-child(2){
+    border: none;
+}
+.RoadAccident_body_chart_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.RoadAccident_body > canvas{
+    height: calc(100% - 20px) !important;
+}
+/*-----on-on-on-----------------*/
+
+.RoadAccident_body_wrap.chartOn.mapOn.tabOn > div:nth-child(1){
+    grid-column: 1 /span 1;
+    grid-row: 1/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOn > div:nth-child(2){
+    grid-column: 1 /span 1;
+    grid-row: 2/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOn > div:nth-child(3){
+    grid-column: 2 /span 1;
+    grid-row: 1/ span 2;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOn > div:nth-child(4){
+    grid-column: 1 /span 2;
+    grid-row: 3/ span 1;
+
+
+}
+/*-------on-off-off----------*/
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff{
+    grid-template-rows: max-content max-content;
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff > div:nth-child(1){
+    grid-column: 1 /span 2;
+    grid-row: 1/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff > div:nth-child(2){
+    grid-column: 1 /span 2;
+    grid-row: 2/ span 1;
+
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block > div{
+    height: 100%;
+    width: 50%;
+    margin-bottom: 0;
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block > div:first-child{
+    margin-right: 5px;
+
+}
+/*-------on-on-off----------*/
+
+.RoadAccident_body_wrap.chartOn.mapOn.tabOff > div:nth-child(1){
+    grid-column: 1 /span 1;
+    grid-row: 1/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOff > div:nth-child(2){
+    grid-column: 1 /span 1;
+    grid-row: 2/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOff > div:nth-child(3){
+    grid-column: 2 /span 1;
+    grid-row: 1/ span 2;
+
+}
+
+/*-------off-on-on----------*/
+.RoadAccident_body_wrap.chartOff.mapOn.tabOn{
+
+    /*grid-template-rows: 60px 50% max-content;*/
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOn > div:nth-child(1){
+    grid-column: 1 /span 2;
+    grid-row: 1/ span 1;
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOn > div:nth-child(3){
+    grid-column: 1 /span 2;
+    grid-row: 2/ span 1;
+    min-height: 400px;
+
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOn > div:nth-child(4){
+    grid-column: 1 /span 2;
+    grid-row: 3/ span 1;
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOn > div:nth-child(4) .ant-table{
+    font-size: 12px;
+    overflow-y: scroll;
+}
+/*-------off-off-on----------*/
+.RoadAccident_body_wrap.chartOff.mapOff.tabOn{
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px max-content;
+}
+.RoadAccident_body_wrap.chartOff.mapOff.tabOn > div:nth-child(1){
+    grid-column: 1 /span 1;
+    grid-row: 1/ span 1;
+}
+.RoadAccident_body_wrap.chartOff.mapOff.tabOn > div:nth-child(4){
+    grid-column: 1 /span 1;
+    grid-row: 2/ span 1;
+}
+/*-------off-on-off----------*/
+.RoadAccident_body_wrap.chartOff.mapOn.tabOff{
+
+    grid-template-rows: 60px minmax(max-content, 100%) ;
+    height: 100%;
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOff > div:nth-child(1){
+    grid-column: 1 /span 2;
+    grid-row: 1/ span 1;
+}
+.RoadAccident_body_wrap.chartOff.mapOn.tabOff > div:nth-child(3){
+    grid-column: 1 /span 2;
+    grid-row: 2/ span 1;
+
+}
+
+/*-------off-off-off----------*/
+.RoadAccident_body_wrap.chartOff.mapOff.tabOff{
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+
+}
+.RoadAccident_body_wrap.chartOff.mapOff.tabOff > div:nth-child(1){
+    grid-column: 1 /span 1;
+    grid-row: 1/ span 1;
+}
+
+/*-------on-off-on----------*/
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn{
+    grid-template-columns: 1fr ;
+    grid-template-rows: 60px minmax(400px, 1fr) max-content;
+}
+.RoadAccident_body_wrap.chartOn.mapOn.tabOff,
+.RoadAccident_body_wrap.chartOn.mapOn.tabOn{
+    grid-template-rows: 60px 85% max-content;
+}
+
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px max-content max-content;
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn > div:nth-child(1){
+    grid-column: 1 /span 2;
+    grid-row: 1/ span 1;
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn > div:nth-child(2){
+    grid-column: 1 /span 2;
+    grid-row: 2/ span 1;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn > div:nth-child(4){
+    grid-column: 1 /span 2;
+    grid-row: 3/ span 1;
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn > div:nth-child(4) .ant-table{
+    font-size: 12px;
+    overflow-y: scroll;
+}
+
+
+
+
+#root{
+    height: 100%;
+}
+.Ant_Drop_Block_Pad {
+    padding: 0 5px;
+}
+.table_block .ant-table-column-sorters {
+    padding: 0 5px;
+}
+.table_block td.ant-table-column-sort {
+    background: rgba(255, 255, 255, 0.1);
+}
+.ant-table-thead > tr > th:nth-child(1) {
+    width: 150px;
+}
+.ant-table-thead > tr > th:nth-child(2),
+.ant-table-thead > tr > th:nth-child(3),
+.ant-table-thead > tr > th:nth-child(6) {
+    width: 200px;
+}
+.ant-table-thead > tr > th:nth-child(4) {
+    width: 100px;
+}
+.ant-table-thead > tr > th:nth-child(5),
+.ant-table-thead > tr > th:nth-child(7) {
+    width: 300px;
+}
+
+
+.ant-checkbox-checked .ant-checkbox-inner,
+.Ant_Drop_Block_Style_item_list .ant-checkbox-checked .ant-checkbox-inner {
+    background: rgba(255, 255, 255, 1);
+    border-color: white;
+
+}
+.ant-checkbox-inner {
+    background-color: #414e60;
+
+
+}
+.ant-checkbox-checked .ant-checkbox-inner::after,
+.Ant_Drop_Block_Style_item_list .ant-checkbox-checked .ant-checkbox-inner::after {
+    display: none;
+}
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner,
+.ant-checkbox-checked::after {
+    border-color: white;
+}
+.Ant_Drop_Block_Style_interval {
+    margin-top: 10px;
+}
+.Ant_Drop_Block_Style_interval .ant-radio-group {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.Ant_Drop_Block_Style_interval .ant-radio-group .ant-radio-wrapper {
+    color: white;
+}
+.Ant_Drop_Block_Style_interval .ant-radio {
+    background: rgba(255, 255, 255, 0.5);
+}
+.Ant_Drop_Block_Style_interval .ant-radio-inner {
+    border-radius: 0;
+}
+.Ant_Drop_Block_Style_interval .ant-radio-inner::after {
+    background-color: #414e60;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.Ant_Drop_Block_Style_interval .ant-radio-checked .ant-radio-inner {
+    border-color: white;
+}
+.Ant_Drop_Block_Style_interval .ant-radio-wrapper:hover .ant-radio,
+.Ant_Drop_Block_Style_interval .ant-radio:hover .ant-radio-inner,
+.Ant_Drop_Block_Style_interval .ant-radio-input:focus + .ant-radio-inner {
+    border-color: white;
+}
+.Ant_Drop_Block_Style_interval > span {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 0.5px solid white;
+}
+.RoadAccident_filter_filter > div {
+    min-width: 230px;
+}
+.clear_filter {
+    width: 25px !important;
+    height: 25px !important;
+
+    cursor: pointer;
+}
+.clear_filter svg {
+    width: 25px;
+    height: 25px;
+}
+.clear_filter:hover svg path {
+    fill: black;
+}
+.noData {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+.noData span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.RoadAccident_filter_item:last-child{
+    min-width: max-content;
+}
+.RoadAccident_body_crime {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block{
+    flex-direction: row;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block > div{
+    width: calc(50% - 5px);
+    margin: 0 5px 0 0;
+    height: 100%;
+
+}
+.RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block > div:last-child{
+    margin-right: 0;
+    width: 50%;
+}
+.ant-spin-dot-item {
+    background-color: white;
+}
+.no_data_style{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+font-size: clamp(22px, 5vw, 36px);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.info-panel{
+    padding: 0 10px;
+    text-align: center;
+}
+@media (max-width: 1100px) {
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block{
+        flex-direction: column;
+
+    }
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block > div:last-child,
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOn .RoadAccident_body_chart_block > div{
+        width: 100%;
+        margin: 0 0 5px 0;
+        height: 100%;
+
+    }
+}
+@media (max-width: 950px) {
+    .RoadAccident_body_wrap{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .RoadAccident_body_wrap > div{
+        min-height: max-content;
+    }
+    .RoadAccident_body_wrap .table_block{
+        min-height: 100%;
+        max-height: max-content;
+
+    }
+    .RoadAccident_body_wrap.chartOn.mapOn.tabOn > div:nth-child(3){
+        height: 40vh;
+    }
+    .table_block{
+        width: 100%;
+
+        overflow: scroll;
+    }
+    .RoadAccident_body_wrap.chartOff.mapOn.tabOff .map_block{
+        flex-grow: 1;
+    }
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block{
+        flex-direction: column;
+    }
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block > div{
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+    .RoadAccident_body_wrap.chartOn.mapOff.tabOff .RoadAccident_body_chart_block > div:first-child{
+        margin-right: 0;
+    }
+    .RoadAccident_body_wrap.chartOn.mapOn.tabOff .RoadAccident_body.map_block{
+        min-height: 400px;
+        margin-bottom: 5px;
+    }
+    .RoadAccident_body_wrap.chartOff.mapOn.tabOn > div:nth-child(4){
+        height: auto;
+        max-height: max-content;
+    }
+
+
+}
+@media (max-width: 500px) {
+    .RoadAccident_filter .ant_drop_menu,
+    .RoadAccident_filter_filter > div{
+        width: 100%!important;
+    }
+    .ant_drop_block, .Article_filter_Block{
+        width: 100%;
+    }
+    .Ant_Drop_Block_Pad  .dropdown-btn{
+        justify-content: space-between!important;
+    }
+    .RoadAccident_filter_item{
+        align-items: center;
+        justify-content: center;
+    }
+    .RoadAccident_body.info_block{
+        padding: 0 5px;
+    }
+    .info_block_item:last-child{
+        width: auto;
+    }
+}
+@media (max-width: 400px) {
+    .RoadAccident_title_wrap{
+        min-height: 30px;
+        margin-bottom: 5px;
+    }
+    .info_block_item_date,
+    .info_block_item{
+        font-size: 1em;
+
+    }
+}

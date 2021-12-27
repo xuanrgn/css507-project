@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  sc-public-safety:
+    build:
+      context: .
+    command: /opt/sc-public-safety/sc-public-safety-exe
+    image: xuanrgn/sc-public-safety:latest
+    ports:
+      - 3004:3000
+
+  public-safety-db:
+    image: postgres
+    restart: always
+    environment:
+        POSTGRES_USER: <DB_USER>
+        POSTGRES_PASSWORD: <DB_PASSWORD>
+        POSTGRES_DB: public-safety-db
+    ports:
+      - 5440:5432
+  
+networks:
+  default:
+    external:
+        name: sc-reforged-overlay
